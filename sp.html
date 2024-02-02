@@ -9,7 +9,71 @@
 </head>
 
 <body>
-    Hello World!
+    SP Lighthouse
+    <div class="container persona-content">
+        <div class="persona-selector">
+            <p class="prefix-text">I am a</p>
+            <div class="persona-options">
+                <span class="selected-option persona-controller">Prospective Student<i class="icon-chevron-right"></i></span>
+                <ul class="persona-list" data-endpoint="/SPContentInterface/PersonaBanner/LoadPersonaTiles">
+                            <li data-value="19a18ae7-cfdc-4c4d-81b5-cef6256bfc61|57d0b87c-f662-49be-94a0-ed18e3deeef2|63293f75-7956-4eca-826f-ba0a63e8ea0f|1aadc56a-8076-4b17-a443-481c602ec1dd|e5ad570b-298d-41eb-9d50-ca1c9885653a|" data-person="Prospective Student"><button>Prospective Student</button></li>
+                            <li data-value="3f301240-8a21-42b1-b519-4765d628888e|a1988034-419f-4096-a1a4-6674cd12d462|03fe3f5a-af28-43c8-9598-dc72831a1f12|" data-person="Adult Learner"><button>Adult Learner</button></li>
+                            <li data-value="19a18ae7-cfdc-4c4d-81b5-cef6256bfc61|57d0b87c-f662-49be-94a0-ed18e3deeef2|bf602695-6434-47ba-b23d-70001a83bf7c|87767bea-1981-43a2-8000-2ee64282961e|" data-person="Parent"><button>Parent</button></li>
+                            <li data-value="ef95bd1a-6660-4960-a154-774a530c231c|4a7476e1-877a-485a-aabb-6484265e9646|ba1062fa-e000-4c01-8ea4-322955dce7a5|57d0b87c-f662-49be-94a0-ed18e3deeef2|6802d702-38d2-478b-9455-bee976c5b1e7|" data-person="Teacher"><button>Teacher</button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="persona-items">
+
+                    <div class="persona-item col-sm-4 animate">
+                        <a href="/sp/about-sp/welcome-to-sp">
+                            <img class="tabletOnwards" src="/images/default-source/default-album/homepage-welcome.jpg?size=600" alt="Page Teaser Image">
+                            <div class="persona-item__text"><i class="icon-home"></i><span>Welcome to SP</span></div>
+                        </a>
+                    </div>
+                    <div class="persona-item col-sm-4 animate">
+                        <a href="/sp/education/full-time-diploma-courses">
+                            <img class="tabletOnwards" src="/images/default-source/default-album/homepage-diplomas.jpg?size=600" alt="Page Teaser Image">
+                            <div class="persona-item__text"><i class="icon-courses"></i><span>Full-Time Diploma Courses</span></div>
+                        </a>
+                    </div>
+                    <div class="persona-item col-sm-4 animate">
+                        <a href="/sp/about-sp/facilities">
+                            <img class="tabletOnwards" src="/images/default-source/default-album/homepage-facilities.jpg?size=600" alt="Page Teaser Image">
+                            <div class="persona-item__text"><i class="icon-facilities"></i><span>Facilities</span></div>
+                        </a>
+                    </div>
+                    <div class="persona-item col-sm-4 animate">
+                        <a href="/sp/ccas">
+                            <img class="tabletOnwards" src="/images/default-source/default-album/homepage-ccas.jpg?size=600" alt="Page Teaser Image">
+                            <div class="persona-item__text"><i class="icon-life-at-sp"></i><span>CCAs</span></div>
+                        </a>
+                    </div>
+                    <div class="persona-item col-sm-4 animate">
+                        <a href="/sp/admissions">
+                            <img class="tabletOnwards" src="/images/default-source/default-album/homepage-admissions.jpg?size=600" alt="Page Teaser Image">
+                            <div class="persona-item__text"><i class="icon-admissions"></i><span>Admissions</span></div>
+                        </a>
+                    </div>
+
+
+                <script id="persona-template" type="text/x-dot-template">
+                    {{~ it :persona}}
+                    <div class="persona-item col-sm-4">
+                        <a href={{=persona.url}} style="text-decoration:none;">
+                            <img class="tabletOnwards" src="{{=persona.image}}">
+                            <div class="persona-item__text">
+                                <i class="{{=persona.icon}}"></i>
+                                <span>{{=persona.title}}</span>
+                            </div>
+                        </a>
+                    </div>
+                    {{~}}
+                </script>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
